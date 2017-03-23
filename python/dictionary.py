@@ -1,8 +1,8 @@
-programmer_dict = {'Tim Berners-Lee' : 'tbl@gmail.com',
-                   'Guido van Rossum' : 'gvr@gmail.com',
-                   'Linus Torvalds': 'lt@gmail.com',
+programmer_dict = {'Tim Berners-Lee' : ['tbl@gmail.com', 111],
+                   'Guido van Rossum' : ['gvr@gmail.com', 222],
+                   'Linus Torvalds': ['lt@gmail.com', 333],
+                   'Larry Page': ['lp@gmail.com', 444],
+                   'Sergey Brin': ['sb@gmail.com', 555]
     }
-programmer_dict['Larry Page'] = 'lp@gmail.com'
-programmer_dict['Sergey Brin'] = 'sb@gmain.com'
-del programmer_dict['Sergey Brin']
+
 print (programmer_dict)
