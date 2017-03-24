@@ -1,16 +1,28 @@
 from dictionary import programmer_dict
-personsName = raw_input('Please eneter a name: ')
-personsInfo = programmer_dict[personsName]
+personsName = raw_input('Please eneter a name: ').lower()
+runAgain = True
 
-try:
-    programmer_dict[personsName]
-    print personsInfo
-except:
-    print 'No one by this name'
-'''if personsInfo == dictionary.programmer_dict[personsName]:
-    print (personsInfo)
+while runAgain == True:
+    def searchPerson(personsName):
+        try:
+            personsInfo = programmer_dict[personsName]
+            print 'Name: ' + personsName.title()
+            print 'Email: ' + personsInfo[0]
+            print 'Number: ' + str(personsInfo[1])
+        except:
+            print 'No one by this name'
+        
+        runAgain = True
+while runAgain == True:
+    personsName = raw_input('Please eneter a name: ').lower()
+    searchPerson(personsName)
+    runAgain = False
+    
+searchAgain = raw_input('Search Again? (y,n)')
+
+if searchAgain == 'y':
+    runAgain = True
 
 else:
-    print('No one by this name')'''
-'''print (personsName)
-print (personsInfo)'''
+    print 'lets quit'
+    runAgain = False
