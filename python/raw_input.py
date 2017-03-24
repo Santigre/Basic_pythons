@@ -1,13 +1,12 @@
-import dictionary
-personsName = input('Please eneter a name: ')
-personsInfo = dictionary.programmer_dict[personsName]
+from dictionary import programmer_dict
+personsName = raw_input('Please eneter a name: ')
+personsInfo = programmer_dict[personsName]
 
 try:
-    dictionary.programmer_dict[personsName]
-    print (personsInfo)
-
+    programmer_dict[personsName]
+    print personsInfo
 except:
-    print ('sdfgh')
+    print 'No one by this name'
 '''if personsInfo == dictionary.programmer_dict[personsName]:
     print (personsInfo)
 
